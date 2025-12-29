@@ -1,15 +1,13 @@
 name: "hello-action"
-description: "greets a person and exposes the greeting as output"
+description: "Greets a person and exposes the greeting as output"
 author: "Akash"
 inputs:
   who-to-greet:
     description: "Name of the person to greet"
     required: true
-
 outputs:
   greeting:
     description: "The greeting message"
-
-  runs:
-    using: "node16"
-    main: "index.js"
+runs:
+  using: "node16"
+  main: "index.js"

@@ -1,15 +1,22 @@
 name: Test Hello Action
+
 on:
   push:
     branches: [ main ]
-
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v4
-     - name: Run local hello action
+
+
+     - name: Run hello action
+       id: hello
        uses: ./
        with:
-         who-to-greet: "Kabir"
+         who-to-greet: "Akash"
+
+
+      - name: Use action output
+        run: echo "Action said: ${{ steps.hello.outputs.greeting }}"

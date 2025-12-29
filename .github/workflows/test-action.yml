@@ -19,4 +19,4 @@ jobs:
 
 
      - name: Use action output
-         run: echo "Action said: ${{ steps.hello.outputs.greeting }}"
+       run: echo "Action said: ${{ steps.hello.outputs.greeting }}"

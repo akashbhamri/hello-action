@@ -8,15 +8,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
+      - name: Run hello action
+        id: hello
+        uses: ./
+        with:
+          who-to-greet: "Akash"
 
-     - name: Run hello action
-       id: hello
-       uses: ./
-       with:
-         who-to-greet: "Akash"
-
-
-     - name: Use action output
-       run: echo "Action said: ${{ steps.hello.outputs.greeting }}"
+      - name: Use action output
+        run: echo "Action said: ${{ steps.hello.outputs.greeting }}"

@@ -1,5 +1,5 @@
 name: "hello-action"
-description: "Greets a person and exposes the greeting as output"
+description: "Greets a person and exposes the greeting as output of the flow "
 author: "Akash"
 inputs:
   who-to-greet:

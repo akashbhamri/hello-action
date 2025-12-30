@@ -16,5 +16,4 @@ jobs:
         with:
           who-to-greet: "Akash"
 
-      - name: Use action output
-        run: echo "Action said: ${{ steps.hello.outputs.greeting }}"
+
